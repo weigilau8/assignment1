@@ -1,0 +1,220 @@
+/* 
+   Css created by Luigi Lauron
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.font-bold  {
+    font-weight: bold;
+}
+.font-medium  {
+    font-weight: 700;
+}
+.p-0 {
+    padding: 0  !important;
+}
+.m-0  {
+    margin: 0 !important;
+}
+.mb-5 {
+    margin-bottom: 3rem;
+}
+.text-center {
+    text-align: center;
+}
+.w-half {
+    width: 50%;
+}
+.w-full {
+    width: 100%;
+}
+body {
+    font-family: 'Montserrat';
+    background-color: #f7ecd8;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: #cda662;
+    color: #fff;
+    padding: 1em 0;
+}
+
+header {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+main {
+    padding-top: 40px;
+    margin-bottom: 3rem;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-full {
+    width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-half {
+    width: 50%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.bg-white {
+    background-color: white;
+    padding:  1.5rem 1em;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo  {
+    width: 150px;
+}
+
+figure {
+    font-size: 12px;
+    text-align: center;
+}
+
+.img-full  {
+    width: 100%;
+}
+
+form {
+    background-color: white;
+    margin: auto;
+}
+
+fieldset {
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 0.5em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: .6rem;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #218f3b;
+}
+
+input[type="reset"] {
+    background-color: transparent;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+}
+
+input[type="reset"]:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.img-container {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.shape ul, 
+.crust ul,
+.toppings ul,
+.order ul{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.shape ul li, 
+.crust ul li,
+.toppings ul li,
+.order ul li{
+    align-items: center;
+    display: flex;
+    padding: .5em 0;
+    flex: 1 0 21%;
+}
+
+.shape ul li input, 
+.crust ul li input,
+.toppings ul li input,
+.order ul li input{
+    margin-right: .5em;
+    cursor: pointer;
+}
+
+.shape ul li label, 
+.crust ul li label,
+.toppings ul li label,
+.order ul li label{
+    margin: 0;
+    cursor: pointer;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2</title>
+
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-full p-0">
+                        <figure>
+                            <img src="logo.png" class="logo" alt="">
+                        </figure>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        <main>
+
+            
+            <!-- 
+                - Number of pizzas
+                - Size (number of slices)
+                - Shape (square or round)
+                - Toppings
+                - Deep dish, thin crust or some other crust types
+                - Take out, delivery, or eat-in g. And so on… 
+            -->
+            
+            <section>
+                <div class="container">
+                    <div class="row bg-white">
+                        <div class="col-full mb-5">
+                            <h1 class="text-center">Order form</h1>
+                        </div>
+                        <div class="col-half">
+                            <figure class="">
+                                <img src="pizza-size.png"  class="img-full" alt="Pizza sizes">
+                                <figcaption>Pizza sizes</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-half">
+                            <form action="/submit-order" method="post">
+                                <!-- Customer Information -->
+                                <fieldset>
+                                <legend>Customer Information</legend>
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="customer_name" placeholder="Full name" required>
+                            
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="customer_email" placeholder="your email"  required>
+                                
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone" name="customer_phone" placeholder="416-1234-567" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}" required>
+                            
+                                <label for="address">Address:</label>
+                                <textarea id="address" name="customer_address" rows="3" required></textarea>
+                                </fieldset>
+                            
+                                <!-- Pizza Details -->
+                                <fieldset>
+                                    <legend>Pizza Details</legend>
+                                
+                                    <label for="num_pizzas">Number of Pizzas:</label>
+                                    <input type="number" id="num_pizzas" name="number_of_pizzas" min="1" required>
+                                
+                                    <label for="size">Size:</label>
+                                    <select id="size" name="pizza_size" required>
+                                        <option value="small">Small (8 slices)</option>
+                                        <option value="medium">Medium (12 slices)</option>
+                                        <option value="large">Large (16 slices)</option>
+                                    </select>
+                                
+                                    <div class="shape">
+                                        <label class="font-medium">Shape:</label>
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="shape_round" name="pizza_shape" value="round" required>
+                                                <label for="shape_round">Round</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="shape_square" name="pizza_shape" value="square" required>
+                                                <label for="shape_square">Square</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="crust">
+                                        <label class="font-medium">Crust Type:</label>
+                                        <ul>
+                                            <li>
+                                                <input type="radio" id="crust_thin" name="crust_type" value="thin" required>
+                                                <label for="crust_thin">Thin Crust</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="crust_deep" name="crust_type" value="deep" required>
+                                                <label for="crust_deep">Deep Dish</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="crust_stuffed" name="crust_type" value="stuffed" required>
+                                                <label for="crust_stuffed">Stuffed Crust</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                
+                                    <div class="toppings">
+                                        <label class="font-medium">Toppings:</label>
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" id="topping_pepperoni" name="toppings" value="pepperoni">
+                                                <label for="topping_pepperoni">Pepperoni</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="topping_mushrooms" name="toppings" value="mushrooms">
+                                                <label for="topping_mushrooms">Mushrooms</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="topping_onions" name="toppings" value="onions">
+                                                <label for="topping_onions">Onions</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="topping_sausage" name="toppings" value="sausage">
+                                                <label for="topping_sausage">Sausage</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="topping_bacon" name="toppings" value="bacon">
+                                                <label for="topping_bacon">Bacon</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="topping_spinach" name="toppings" value="spinach">
+                                                <label for="topping_spinach">Spinach</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="topping_pineapple" name="toppings" value="pineapple">
+                                                <label for="topping_pineapple">Pineapple</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="topping_extra_cheese" name="toppings" value="extra_cheese">
+                                                <label for="topping_extra_cheese">Extra Cheese</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="topping_green_peppers" name="toppings" value="green_peppers">
+                                                <label for="topping_green_peppers">Green Peppers</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="topping_black_olives" name="toppings" value="black_olives">
+                                                <label for="topping_black_olives">Black Olives</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                
+                                    <label for="special_instructions">Special Instructions:</label>
+                                    <textarea id="special_instructions" name="special_instructions" rows="3"></textarea>
+                                </fieldset>
+                            
+                                <!-- Order Type -->
+                                <fieldset>
+                                    <div class="order m-0">
+                                        <legend>Order Type</legend>
+                                        <ul class="m-0">
+                                            <li>
+                                                <input type="radio" id="take_out" name="order_type" value="take_out" required>
+                                                <label for="take_out">Take Out</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="delivery" name="order_type" value="delivery" required>
+                                                <label for="delivery">Delivery</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="eat_in" name="order_type" value="eat_in" required>
+                                                <label for="eat_in">Eat In</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </fieldset>
+                            
+                                <div class="row">
+                                    <!-- Form Controls -->
+                                    <div class="col-half">
+                                        <input type="reset" class="w-full" value="Reset Form">
+                                    </div>
+                                    <div class="col-half">
+                                        <input type="submit" class="w-full" value="Place Order">
+                                    </div>
+                                    
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </section>
+        </main>
+              
+        <footer>
+            <div class="container">
+                <p class="text-center">&copy; 2024 Luigi's Pizza | Best in town. All rights reserved.</p>
+            </div>
+        </footer>  
+        
+    </body>
+</html>
